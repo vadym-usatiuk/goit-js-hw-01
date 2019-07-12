@@ -23,8 +23,9 @@ let totalPrice;
 let diffrenceCreditsToTotalPrice;
 let howManyDroidWantToBuy = prompt("Сколько дронов вы желаете приобрести?");
 
-if (howManyDroidWantToBuy === null) {
-  message = "Отменено пользователем!";
+if (!isNaN(howManyDroidWantToBuy) || howManyDroidWantToBuy !== null || howManyDroidWantToBuy !== "") {
+  message = "Отменено пользователем! Введите, пожалуйста, число!";
+  console.log(message);
 } else {
   totalPrice = howManyDroidWantToBuy * pricePerDroid;
   if (totalPrice > credits) {

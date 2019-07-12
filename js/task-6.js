@@ -16,27 +16,47 @@
 // let input;
 // let total = 0;
 
+// 2-й вариант реализации
+
 let input;
 let total = 0;
-let list = [];
-let item;
 let message;
 
-do {
-  input = prompt("Введите число");
-  if (!isNaN(input) && input !== null && input !== "") {
-    list.push(+input);
-  } else if (input === null) {
-    break;
-  } else {
+while ((input = prompt("Введите число"))) {
+  if (isNaN(Number.parseInt(input)) && input !== null && input !== "") {
     message = "Было введено не число, попробуйте еще раз";
     alert(message);
-  }
-} while (input !== null);
-for (item of list) {
-  if (list.length !== 0) {
-    total = item + total;
+  } else {
+    total = Number.parseInt(input) + total;
   }
 }
+
 message = `Общая сумма чисел равна ${total}`;
 alert(message);
+
+//1-й вариант реализации
+
+// let input;
+// let total = 0;
+// let list = [];
+// let item;
+// let message;
+
+// do {
+//   input = prompt("Введите число");
+//   if (!isNaN(input) && input !== null && input !== "") {
+//     list.push(+input);
+//   } else if (input === null) {
+//     break;
+//   } else {
+//     message = "Было введено не число, попробуйте еще раз";
+//     alert(message);
+//   }
+// } while (input !== null);
+// for (item of list) {
+//   if (list.length !== 0) {
+//     total = item + total;
+//   }
+// }
+// message = `Общая сумма чисел равна ${total}`;
+// alert(message);
