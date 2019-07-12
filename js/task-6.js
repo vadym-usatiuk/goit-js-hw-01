@@ -16,7 +16,7 @@
 // let input;
 // let total = 0;
 
-// 2-й вариант реализации
+// 2-й Вариант реализации
 
 let input;
 let total = 0;
